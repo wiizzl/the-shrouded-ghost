@@ -185,6 +185,7 @@
     <ClInclude Include="include\ue4\Vector.h" />
     <ClInclude Include="include\ue4\Vector2D.h" />
     <ClInclude Include="include\ue4\Vector4.h" />
+    <ClInclude Include="src\main.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\HookLib.lib" />

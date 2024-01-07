@@ -1,41 +1,9 @@
 #include <Windows.h>
-#include <cstdio>
 #include <string>
-#include "imgui/imgui.h"
 
-bool menuVisible = false;
+#include "main.h"
 
-char logoSOT[] =
-"                                    &@@@@@@@@@@&                                \n"
-"                            @/#@@@@@@@@@@@@@@@@@@@@@@@@                         \n"
-"                       %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@                    \n"
-"                    @@@@@@@@@@@@@@, %@@@@@@@@@@@@   .                           \n"
-"                  @@@        %@@@@@@@@@@@@  @@           *@@@@@/                \n"
-"                ,&    @@@@@@@@@@@@@@@@@@@  .       @@@@@@@@@@@@@%               \n"
-"                  %@@@@@@@@@@&   @@@@        @@@@@@@@@@@@@@@@@@@*               \n"
-"              @@@@@@@@@@@ &(& # @@@*   %@@@@@@@@@@@@@#@@@@@@@@@@@@@             \n"
-"            %@@@@@@@@@@@@       #  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@            \n"
-"            @@@@@@@@@@            @@@@@@@@@@@@@@@,@@@@@@@@@@& @@@@@@@@          \n"
-"            &@@@@@@@@@         @  @@@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@          \n"
-"             @@@@@@@   ,            @@@@@@@@@@@@@@@@@@@*      @@@@@@@@          \n"
-"            @@@     @@@#            @@@@@@@@@@@@@@@@@      ,   @@@@@@@          \n"
-"               @    %@              @@@@ &@@@@@@@@@     ,      @@@@@@           \n"
-"                      @%.     &/  @   &@@@@@@@@@        (      @@@@@            \n"
-"             ,                      &@@@@@@@@@@@              @@@@@@            \n"
-"           @@@@@                   @@@@      @@*,.     /.,(,    &@@@@           \n"
-"          @@@@% /@  ,/.&          /@@@        @@@@@@@@@@@@@@@@@@@@@@@@@         \n"
-"               @@@@@@@@@@@@@@@@@@@@@      @    @@@@@@@@@@@@@@@@@@@@@@           \n"
-"               @@@@@@@@@@@@@@@   .@@%   @@@     @@@@@@@@.   @@@@@@              \n"
-"                 &@@@@@@@@@@@@@@@@      %@@@@ .,@*.@@@@@@  *@@@@@@              \n"
-"                        @@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@     &@@@               \n"
-"                          /@@@@@@@@@@@@@@@@@@@@@@@@ @@@                         \n"
-"                          @@@@  @@ .@@@@@@@@@  #@@@   @                         \n"
-"                           @@&        @@@@,    @@@@@@@                          \n"
-"                           ( @#      @@@@@@    @@@@@@                           \n"
-"                           @@@       @@@@*      @@@@@                           \n"
-"                                     @@@@#     @  @                             \n\n";
-
-bool IsTargetProcess()
+bool IsGoodTarget()
 {
     char szFileName[MAX_PATH];
     GetModuleFileName(NULL, szFileName, MAX_PATH);
@@ -59,8 +27,7 @@ DWORD WINAPI MainThread(LPVOID lpParam)
     FILE* pConsole;
     freopen_s(&pConsole, "CONOUT$", "w", stdout);
 
-    printf(logoSOT);
-    printf("The program is now initialized and ready for use.\n\nINSERT = Open menu\nDELETE = Silent exit\n\n");
+    printf("%s\nThe program is now initialized and ready for use.\n\nINSERT = Open menu\nDELETE = Silent exit\n\n", logoSOT);
 
     while (true)
     {
@@ -98,7 +65,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        if (IsTargetProcess())
+        if (IsGoodTarget())
         {
             CreateThread(nullptr, 0, MainThread, hModule, 0, nullptr);
         }
