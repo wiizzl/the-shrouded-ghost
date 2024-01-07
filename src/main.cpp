@@ -1,22 +1,17 @@
 #include <Windows.h>
 #include <string>
+#include <imgui/imgui.h>
+#include <imgui/imgui_impl_win32.h>
+#include <imgui/imgui_impl_dx11.h>
 
 #include "main.h"
+#include "gui.h"
 
-bool IsGoodTarget()
+bool endProgram()
 {
-    char szFileName[MAX_PATH];
-    GetModuleFileName(NULL, szFileName, MAX_PATH);
-
-    std::string processName = strrchr(szFileName, '\\') + 1;
-
-    if (processName != "SoTGame.exe")
-    {
-        MessageBox(NULL, "This program only work with Sea of Thieves (SoTGame.exe) !", "Error", MB_OK | MB_ICONERROR);
-        return false;
-    }
-
-    return true;
+    // Code pour éteindre tout
+    // ...
+    return 0;
 }
 
 DWORD WINAPI MainThread(LPVOID lpParam)
@@ -33,31 +28,18 @@ DWORD WINAPI MainThread(LPVOID lpParam)
     {
         if (GetAsyncKeyState(VK_INSERT) & 1)
         {
-            if (!menuVisible)
-            {
-                printf("afficher menu\n");
-                menuVisible = true;
-            }
-            else
-            {
-                printf("cacher menu\n");
-                menuVisible = false;
-            }
+            menuVisible = !menuVisible;
+            printf("test");
         }
         if (GetAsyncKeyState(VK_DELETE) & 1)
         {
-            HWND hwndConsole;
-            hwndConsole = GetConsoleWindow();
-            ShowWindow(hwndConsole, SW_HIDE);
-
-            FreeConsole();
-            FreeLibraryAndExitThread(static_cast<HMODULE>(lpParam), 0);
+            // code pour éteindre toute traces de l'injection
+            // ...
         }
         Sleep(20);
     }
 
-    FreeConsole();
-    return 0;
+    endProgram();
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
@@ -65,10 +47,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        if (IsGoodTarget())
-        {
-            CreateThread(nullptr, 0, MainThread, hModule, 0, nullptr);
-        }
+        CreateThread(nullptr, 0, MainThread, hModule, 0, nullptr);
         break;
     case DLL_PROCESS_DETACH:
         break;

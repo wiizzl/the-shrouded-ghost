@@ -147,8 +147,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
@@ -162,6 +161,7 @@
     <ClCompile Include="include\imgui\imgui_widgets.cpp" />
     <ClCompile Include="include\ue4\Transform.cpp" />
     <ClCompile Include="include\ue4\UE4.cpp" />
+    <ClCompile Include="src\gui.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +185,7 @@
     <ClInclude Include="include\ue4\Vector.h" />
     <ClInclude Include="include\ue4\Vector2D.h" />
     <ClInclude Include="include\ue4\Vector4.h" />
+    <ClInclude Include="src\gui.h" />
     <ClInclude Include="src\main.h" />
   </ItemGroup>
   <ItemGroup>

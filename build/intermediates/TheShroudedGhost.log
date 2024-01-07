@@ -1,0 +1,26 @@
+﻿  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  Transform.cpp
+  UE4.cpp
+C:\Users\Pierre\Downloads\TheShroudedGhost\include\ue4\Vector.h(448,10): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'include/ue4/Transform.cpp')
+  
+C:\Users\Pierre\Downloads\TheShroudedGhost\include\ue4\Vector.h(449,10): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'include/ue4/Transform.cpp')
+  
+C:\Users\Pierre\Downloads\TheShroudedGhost\include\ue4\Vector.h(448,10): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'include/ue4/UE4.cpp')
+  
+C:\Users\Pierre\Downloads\TheShroudedGhost\include\ue4\Vector.h(449,10): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'include/ue4/UE4.cpp')
+  
+  gui.cpp
+  main.cpp
+  Génération de code en cours...
+  LINK : /LTCG spécifié mais aucune génération de code requise ; supprimez /LTCG de la ligne de commande de l'édition de liens pour améliorer les performances de l'éditeur de liens
+  TheShroudedGhost.vcxproj -> C:\Users\Pierre\Downloads\TheShroudedGhost\build\TheShroudedGhost.dll
