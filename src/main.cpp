@@ -29,7 +29,7 @@ DWORD WINAPI MainThread(LPVOID lpParam)
         if (GetAsyncKeyState(VK_INSERT) & 1)
         {
             menuVisible = !menuVisible;
-            printf("test");
+            printf("test\n");
         }
         if (GetAsyncKeyState(VK_DELETE) & 1)
         {
