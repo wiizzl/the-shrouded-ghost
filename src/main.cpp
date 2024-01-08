@@ -11,7 +11,7 @@ bool endProgram()
 {
     // Code pour éteindre tout
     // ...
-    return 0;
+    return true;
 }
 
 DWORD WINAPI MainThread(LPVOID lpParam)
