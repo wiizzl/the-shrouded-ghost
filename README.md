@@ -3,6 +3,7 @@
 This is a Sea of Thieves utility.
 
 Based on [SoT-Hook](https://github.com/guttir14/SoT-Hook) and [Sea of Choros](https://github.com/ToxSylph/SeaOfChoros).
+The hook method is made with [kiero](https://github.com/Rebzzel/kiero).
 
 ## Disclaimer
 
