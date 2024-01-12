@@ -17,17 +17,7 @@ This project has been created for educational purposes only. I am in no way resp
 git clone https://github.com/wiizzl/the-shrouded-ghost
 ```
 
-2. Install latest [HookLib and Zydis](https://github.com/HoShiMin/HookLib) libs (clone [HookLib](https://github.com/HoShiMin/HookLib) and use this command inside the folder)
-
-```
-git submodule update --init --recursive
-``` 
-
-3. Compile HookLib in **Release x64** mode
-
-4. Put HookLib\x64\Release\HookLib.lib and HookLib\Zydis\msvc\bin\ReleaseX64\Zydis.lib to the-shrouded-ghost\lib
-
-5. Compile [the-shrouded-ghost](https://github.com/wiizzl/the-shrouded-ghost) in **Release x64** mode
+2. Compile [the-shrouded-ghost](https://github.com/wiizzl/the-shrouded-ghost) in **Release x64** mode
 
 ## Update
 
