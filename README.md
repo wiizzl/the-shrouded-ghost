@@ -3,7 +3,7 @@
 This is a Sea of Thieves utility.
 
 Based on [SoT-Hook](https://github.com/guttir14/SoT-Hook) and [Sea of Choros](https://github.com/ToxSylph/SeaOfChoros).
-The hook method is made with [kiero](https://github.com/Rebzzel/kiero).
+The hook method is made with [kiero](https://github.com/Rebzzel/kiero) and I got inspiration from [this repo](https://github.com/rdbo/ImGui-DirectX-11-Kiero-Hook) to help me hook a imgui menu into the game.
 
 ## Disclaimer
 
