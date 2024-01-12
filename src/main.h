@@ -1,7 +1,5 @@
 #pragma once
 
-static bool menuVisible = false;
-
 char logoSOT[] =
 "                                    &@@@@@@@@@@&                                \n"
 "                            @/#@@@@@@@@@@@@@@@@@@@@@@@@                         \n"
