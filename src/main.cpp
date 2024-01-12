@@ -1,7 +1,5 @@
 #include "includes.h"
 #include "main.h"
-#include "gui/gui.h"
-#include "gui/gui_config.h"
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -78,7 +76,8 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
     );
 
     ImGui::Button("Ceci est un bouton");
-    ImGui::Checkbox("Ceci est une checkbox", &toggle_check);
+    ImGui::Checkbox("Ceci est une checkbox", &cfg.client.enable);
+    ImGui::Text("Cest est du texte");
 
     ImGui::End();
 

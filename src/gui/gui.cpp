@@ -1,5 +1,4 @@
 #include "../src/includes.h"
-#include "gui.h"
 
 void SetupImGuiStyle()
 {

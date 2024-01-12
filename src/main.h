@@ -1,5 +1,7 @@
 #pragma once
 
+Config::Configuration cfg;
+
 char logoSOT[] =
 "                                    &@@@@@@@@@@&                                \n"
 "                            @/#@@@@@@@@@@@@@@@@@@@@@@@@                         \n"
